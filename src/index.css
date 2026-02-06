@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme inline {
+  --radius: 0.75rem;
+}
+
+:root {
+  --primary: oklch(0.45 0.18 264);
+  --primary-foreground: oklch(0.98 0.002 264);
+  --background: oklch(0.98 0.002 264);
+  --foreground: oklch(0.15 0.01 264);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.01 264);
+  --secondary: oklch(0.95 0.01 264);
+  --secondary-foreground: oklch(0.2 0.01 264);
+  --muted: oklch(0.95 0.01 264);
+  --muted-foreground: oklch(0.5 0.01 264);
+  --accent: oklch(0.92 0.02 264);
+  --accent-foreground: oklch(0.2 0.01 264);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0.002 264);
+  --border: oklch(0.88 0.01 264);
+  --input: oklch(0.88 0.01 264);
+  --ring: oklch(0.45 0.18 264);
+}
+
+.dark {
+  --primary: oklch(0.65 0.18 264);
+  --primary-foreground: oklch(0.12 0.01 264);
+  --background: oklch(0.12 0.01 264);
+  --foreground: oklch(0.95 0.002 264);
+  --card: oklch(0.14 0.01 264);
+  --card-foreground: oklch(0.95 0.002 264);
+  --secondary: oklch(0.2 0.02 264);
+  --secondary-foreground: oklch(0.9 0.002 264);
+  --muted: oklch(0.2 0.02 264);
+  --muted-foreground: oklch(0.6 0.01 264);
+  --accent: oklch(0.25 0.03 264);
+  --accent-foreground: oklch(0.9 0.002 264);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.95 0.002 264);
+  --border: oklch(0.25 0.02 264);
+  --input: oklch(0.25 0.02 264);
+  --ring: oklch(0.65 0.18 264);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1400px;
+    }
+  }
+
+  .scrollbar-elegant::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-elegant::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .scrollbar-elegant::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  .scrollbar-elegant::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+
+  .transition-elegant {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-effect {
+    @apply bg-background/80 backdrop-blur-xl border border-border/50;
+  }
+
+  .shadow-elegant {
+    box-shadow: 0 2px 8px -2px oklch(0% 0 0 / 0.08), 0 4px 16px -4px oklch(0% 0 0 / 0.06);
+  }
+
+  .shadow-elegant-lg {
+    box-shadow: 0 4px 16px -4px oklch(0% 0 0 / 0.1), 0 8px 32px -8px oklch(0% 0 0 / 0.08);
+  }
+}
