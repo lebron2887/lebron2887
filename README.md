@@ -1,16 +1,19 @@
-## Hi there 👋
+# AI Instant Assistant
 
-<!--
-**lebron2887/lebron2887** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+A smart AI assistant with tiered pricing (Free/Pro/Max) that delivers instant, accurate responses using OpenAI's latest models.
 
-Here are some ideas to get you started:
+## Features
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- **Free Tier**: 15 images/month, GPT-4o Mini
+- **Pro Tier**: 50 images/month, GPT-4o, faster responses
+- **Max Tier**: Unlimited images, GPT-4o with extended thinking, most accurate
+- **Stripe Integration**: Seamless payment processing
+- **GitHub Pages Ready**: Runs entirely on the frontend
+- **Voice Input**: Transcribe speech to text
+- **Image Analysis**: Upload and analyze images with AI
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Create `.env.local`:
